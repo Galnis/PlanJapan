@@ -217,6 +217,8 @@ footer {
     .CanFindHere td {
         width: 20%; /* Distribute the width evenly across 5 columns */
         text-align: center;
+        padding-left:2vw;
+        padding-right:2vw;
     }
 
         .CanFindHere td img {
