@@ -50,7 +50,7 @@ function changeSeasonImage(season) {
  
     // Update the image source based on the selected season
     if (season == 'Summer') {
-        image.src = 'images/PlanYourTrip/Seasons/Sunflowers.png';  // Summer image
+        image.src = 'images/PlanYourTrip/Seasons/SunFlowers.png';  // Summer image
     } else if (season == 'Autumn') {
         image.src = 'images/PlanYourTrip/Seasons/AutumnLeaves.png';  // Autumn image
     } else if (season == 'Winter') {
