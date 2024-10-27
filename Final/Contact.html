@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Plan Japan - Contact Us</title>
+    <meta name="description" content="Contact us for more information, questions, or to get assistance. We are here to help with any feedback you may have." />
+    <meta name="keywords" content="contact, get in touch, support, assistance, travel questions, feedback, Japan travel, customer service, communication" />
+    <meta name="author" content="Sharon Sulema, Gal Nissanzon, Rotem Bokobza, Yali Tuchler" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400&family=Assistant:wght@200..800&family=Heebo:wght@100..900&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="styles/myStyle.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo_mini.png" alt="mini logo" />
+
+    <!-- Scripts -->
+    <script src="jScripts/jquery-3.6.0.min.js"></script>
+    <script src="jScripts/JavaScript.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <header>
+        <section>
+            <nav class="navbar" aria-label="Main Navigation">
+                <ul>
+                    <li>
+                        <a href="HomePage.html"><img class="navbar-logo" src="images/PlanYourTrip/LogoPlanJapan.png"></a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="AboutUs.html">About</a>
+                        <ul class="dropdown-content">
+                            <li><a href="AboutUs.html">About Us</a></li>
+                            <li><a href="Contact.html">Contact</a></li>
+                            <li><a href="WebsiteMap.html">Website Map</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a>Things to Do</a>
+                        <ul class="dropdown-content">
+                            <li><a href="MustVisit.html">Must Visit</a></li>
+                            <li class="disabled"><a>Temples</a></li>
+                            <li class="disabled"><a>Nature</a></li>
+                            <li class="disabled"><a>Special Events</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a>Culture</a>
+                        <ul class="dropdown-content">
+                            <li class="disabled"><a>History</a></li>
+                            <li class="disabled"><a>Customs</a></li>
+                            <li><a href="Traditions.html">Traditions</a></li>
+                            <li class="disabled"><a>Japan in the 21st Century</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a>Cuisine</a>
+                        <ul class="dropdown-content">
+                            <li class="disabled"><a>Restaurants</a></li>
+                            <li class="disabled"><a>Food Markets</a></li>
+                            <li class="disabled"><a>Michelin Guide</a></li>
+                        </ul>
+                    </li>
+                    <li class="disabled">
+                        <a>Destinations</a>
+                    </li>
+                    <li>
+                        <a href="PlanYourTrip.html">Plan Your Trip</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <main class="no-padding">
+        <section>
+            <section class="background-container">
+                <!-- Background image -->
+                <img src="images/Contact/JapaneseScene.jpg" alt="Japanese landscape with cherry blossom trees, a temple, and a lake" />
+
+                <!-- Contact form -->
+                <div class="form-container">
+                    <section>
+                        <nav class="breadcrumbsMenu" aria-label="Breadcrumbs Navigation">
+                            <ol>
+                                <li><a href="HomePage.html">Home</a></li>
+                                <li><a href="AboutUs.html">About</a></li>
+                                <li><a href="Contact.html">Contact</a></li>
+                            </ol>
+                        </nav>
+
+                        <h1 id="contact-title">We Are Here to Help!</h1>
+                        <p id="contact-text">If you have any questions, we would love to hear from you.</p>
+
+                        <form action="#" method="post" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Full Name<span class="required">*</span></label><br />
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">E-mail<span class="required">*</span></label><br />
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone<span class="required">*</span></label><br />
+                                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="button" id="send">Send</button>
+                        </form>
+                    </section>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

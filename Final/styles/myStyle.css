@@ -1,0 +1,591 @@
+﻿/*General*/
+@font-face {
+    font-family: 'Inknut Antiqua';
+    font-style:normal;
+    src: url('../fonts/InknutAntiqua/InknutAntiqua-Regular.ttf');
+}
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    padding-top:15vh;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inknut Antiqua'; /* פונט לכותרות */
+    font-weight: bold; /* Inknut Antiqua bold */
+    text-transform: none; /* אותיות רגילות */
+    line-height: 1;
+}
+.PageMargins{
+    margin-left:10%;
+    margin-right:10%;
+    }
+h2, h3, h4, h5, h6 {
+    font-size: 30px; /* הגדלת גודל הפונט של כותרות משניות */
+    line-height: 1.75;
+}
+h1 {
+    font-size: 81px; /* הגדלת גודל הפונט של הכותרת הראשית */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FDF4E3;
+    font-family: 'Inknut Antiqua', serif;
+    background-color: #FFF6E6;
+}
+#SecondaryDescription{
+    margin-top:5vh;
+}
+p {
+    font-family: 'Instrument Sans'; /* פונט לפסקאות */
+    font-weight: normal; /* Instrument Sans bold */
+    text-transform: none; /* אותיות רגילות */
+    font-size: 24px;
+    line-height: 1.75;
+}
+
+footer {
+    margin-top: 50px; /* Adjust the value to control the space */
+}
+
+
+/*Navigation bar*/
+.navbar-logo {
+    max-height: 50px; /* Adjust the max height as needed */
+    width: auto; /* Maintain aspect ratio */
+    display: block;
+    padding: .1vh 0 1vh 0;
+}
+
+.navbar-logo {
+    max-height: 50px; /* Adjust the max height as needed */
+    width: auto; /* Maintain aspect ratio */
+    display: block;
+    padding: .1vh 0 1vh 0;
+}
+
+.navbar {
+    background-color: #FFE9CD;
+    height: 7vh;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    position: fixed; /* Establish stacking context */
+    z-index: 10; /* Ensure the navbar is above other content */
+}
+    .navbar ul {
+        list-style: none;
+        display: flex; /* Main navbar menu displays items in a row */
+        width: 100%;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+    }
+
+        .navbar ul li {
+            position: relative; /* For dropdown positioning */
+        }
+
+            .navbar ul li a {
+                text-decoration: none;
+                color: #333;
+                font-family: 'Inknut Antiqua', serif;
+                font-size: 1vw;
+                font-weight: normal;
+                padding-top: 2vw;
+            }
+
+                .navbar ul li a:hover {
+                    text-decoration: underline; /* Underline on hover */
+                    color: #333; /* Keep the text color consistent */
+                }
+
+            .navbar ul li .dropdown-content {
+                opacity: 0; /* Initially hidden */
+                display: flex;
+                flex-direction: column;
+                visibility: hidden; /* Hidden from view */
+                position: absolute;
+                background-color: #FFE9CD;
+                min-width: 160px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 10; /* Ensure it's on top */
+                top: 5.8vh;
+                border-top: 2px solid #FDF4E3;
+                transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+            }
+
+            .navbar ul li .dropdown-content li {
+                display:block;
+                padding: 0;
+                text-align: left;
+                background-color: #FFE9CD;
+            }
+
+                .navbar ul li .dropdown-content li a {
+                    color: #333;
+                    font-size: 0.9vw;
+                    padding: 10px;
+                    display: block;
+                    text-decoration: none;
+                    font-family: 'Inknut Antiqua', serif;
+                    transition: color 0.3s, text-decoration 0.3s; /* Add smooth underline transition */
+                }
+
+                    .navbar ul li .dropdown-content li a:hover {
+                        text-decoration: underline; /* Underline on hover */
+                        /* Remove the background color change */
+                        color: #333; /* Keep the text color consistent */
+                    }
+            .navbar ul li:hover .dropdown-content {
+                opacity: 1; /* Make visible */
+                visibility: visible; /* Display */
+            }
+
+.disabled{
+    cursor: not-allowed;
+    color: gray;
+}
+/*Breadcrumbs menu*/
+.breadcrumbsMenu ol {
+    list-style: none; /* Remove default numbering */
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+    .breadcrumbsMenu ol li {
+        font-family: 'Inknut Antiqua', serif;
+        font-size: 0.9vw;
+    }
+
+        .breadcrumbsMenu ol li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Add ">" after each breadcrumb item except the last one */
+        .breadcrumbsMenu ol li::after {
+            content: " > ";
+            margin: 0 5px;
+            color: #999; /* Lighter color for the separator */
+        }
+
+        /* Remove ">" for the last breadcrumb item */
+        .breadcrumbsMenu ol li:last-child::after {
+            content: "";
+        }
+
+/*HomePage*/
+#openingImage {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    height: 35vw;
+}
+
+.specialP {
+    font-family: 'Inknut Antiqua';
+}
+
+#WhereAmI {
+    margin-top: 5vw;
+    width: 40%
+}
+.JapaneseTitle {
+    font-size: 40px;
+    font-family: 'Sawarabi Mincho', serif;
+    margin-top: -5vh;
+}
+.CanFindHere {
+    margin: 0 10%; /* Margins of 10% on the left and right sides */
+    overflow-x: hidden; /* Ensure no horizontal scrolling occurs */
+    margin-top: 5vh;
+}
+
+    .CanFindHere table {
+        width: 100%; /* Ensure the table fits within the available width */
+        table-layout: fixed; /* Ensure the columns are evenly distributed */
+        border-collapse: collapse;
+    }
+
+    .CanFindHere td {
+        width: 20%; /* Distribute the width evenly across 5 columns */
+        text-align: center;
+    }
+
+        .CanFindHere td img {
+            width: 100%; /* Set the image width to 100% of the cell */
+            max-width: 100%; /* Ensure the image does not exceed the cell width */
+            height: auto; /* Maintain aspect ratio */
+        }
+#FindHereSection{
+    padding-top:5vw;
+}
+
+/*About Us*/
+
+.AboutFooter {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; /* Ensures the footer spans the full width of the page */
+    height: 50vh; /* Ensures the footer takes up the full height of the viewport */
+    text-align: center; /* Ensures the text inside is centered */
+    flex-direction: column; /* Stacks items vertically */
+}
+
+#HITlogo {
+    height: auto;
+    width: 10%; /* Adjust width percentage as needed */
+}
+
+a {
+    margin-bottom: 20px; /* Adds some space between the link and the logo */
+}
+
+/*Website Map*/
+
+li {
+    margin-left: 30px; /* Optional: Slight indentation for <li> */
+}
+
+/*Must Visit*/
+#container {
+    width: 100%;
+    padding: 5vh 0 0 0;
+}
+
+.left_pic {
+    width: 250px;
+    margin-right: 20px;
+    order: 1;
+}
+
+.right_pic {
+    width: 250px;
+    margin-left: 20px;
+    order: 3;
+}
+
+.textP {
+    flex-grow: 1;
+    order: 2;
+}
+
+.content_block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 10vh 0 0 0;
+    clear: both;
+}
+
+.image_container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer h1 {
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 3rem;
+    text-align: left;
+    color: #2c1e12;
+    margin-bottom: 40px;
+}
+
+footer h2 {
+    font-family: 'Sawarabi Mincho', sans-serif;
+    font-size: 1.5rem;
+    text-align: left;
+    color: #2c1e12;
+    margin-top: 10px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #bf2d2d;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid #bf2d2d;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    cursor: not-allowed;
+}
+
+    .read-more:hover {
+        color: gray;
+        border-bottom: 2px solid #a02323;
+    }
+
+#TrainPic {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+}
+
+#japanese-heading {
+    font-family: 'Sawarabi Mincho', sans-serif;
+    text-align: left;
+    margin-top: -5vh;
+    color: #2c1e12;
+}
+
+/*Traditions*/
+
+.bordered-table-Tradition {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    object-position: top;
+}
+
+.TraditionTitle {
+    color: #000;
+    text-align: right;
+    font-family: "Inknut Antiqua";
+    font-style: normal;
+    font-weight: 700;
+    text-align: left;
+}
+
+.TraditionText {
+    color: #000;
+    text-align: right;
+    font-family: "Instrument Sans";
+    font-style: normal;
+    font-weight: 200;
+    text-align: left;
+}
+
+#section-geishas {
+    width: 28%
+}
+
+#section-sumos {
+    width: 31%
+}
+
+
+.traditions-img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Removes extra space below image */
+    object-fit: contain; /* Ensures image fits within the cell without distortion */
+    padding: 0; /* Ensures no additional padding pushes the image out of bounds */
+}
+
+.caligraphy-img {
+    margin-left: 10%;
+    margin-right: 10%;
+    height: auto;
+    width: 80%; 
+}
+
+.relative-position {
+    position: relative;
+}
+
+/*plan your trip*/
+.page-title {
+    color: #000;
+    font-family: "Inknut Antiqua";
+    font-size: 5vh;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    margin-left: 10%;
+    text-align: left;
+}
+.PlanTitle {
+    color: #000;
+    text-align: right;
+    font-family: "Inknut Antiqua";
+    font-size: 2vw;
+    font-style: normal;
+    font-weight: 700;
+    text-align: left;
+}
+
+
+.bordered-table {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-spacing: 1vw;
+    margin-bottom: 5vh;
+    object-position: top;
+}
+
+#JapanMapContainer {
+    position:relative;
+}
+.SelectionTable {
+    width: 100%;
+    margin-top: 0;
+    font-size: .75vw;
+    text-align: left;
+    background-color: #FEF9F3;
+    border-radius: 1vw;
+    overflow: hidden;
+}
+    .SelectionTable td {
+        font-family: 'Instrument Sans'; /* פונט לפסקאות */
+        font-weight: normal; /* Instrument Sans bold */
+        text-transform: none; /* אותיות רגילות */
+        font-size: 18px;
+        line-height: 1;
+    }
+.AttractionImage {
+    display: none;
+    width: 100%; /* Image takes full width */
+    padding: 5vh 0 0 10%;
+    position: absolute;
+    top: 0;
+    left: 0; /* Optional, if you want to align the image to the left as well */
+    width: 100%; /* Ensures they take up the full width of the cell */
+    height: auto;
+}
+.img-container {
+    width: 100%; /* Image takes full width */
+    /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+    padding: 5vh 0 0 10%;
+    position: absolute;
+    top: 0;
+    left: 0; /* Optional, if you want to align the image to the left as well */
+    width: 100%; /* Ensures they take up the full width of the cell */
+    height: auto;
+}
+#JapanSeason {
+    display: none;
+    opacity: 0.8;
+}
+.Width40 {
+    width: 40%;
+}
+.Width75{
+    width:75%;
+}
+.SelectionTable th {
+    background-color: #DBD2C1;
+    border: none;
+    font-size: 1vw;
+    padding: 0 0 0 1vw;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.SelectionTable td {
+    border: none;
+    padding: .2vw 1vw .2vw 1vw;
+    background-color: #FFF;
+    vertical-align: top;
+}
+
+    .SelectionTable td input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+/* Contact form */
+.no-padding {
+    padding-top: 0;
+}
+    /* Background container for the page */
+    #contact-title {
+        font-size: 30px; /* הגדלת גודל הפונט של כותרות משניות */
+    }
+
+    #contact-text {
+        font-size: 16px; /* הגדלת גודל הפונט של כותרות משניות */
+        margin-top: 1.5vh;
+    }
+    .background-container {
+        position: absolute;
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    /* Background image styling */
+    .background-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display:block;
+        object-fit: cover; /* Ensures the image covers the full background */
+        z-index: -1; /* Puts the image behind the form */
+    }
+
+    /* Styling for the contact form container */
+    .form-container {
+        background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 500px;
+        width: 100%;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 1; /* Ensures the form appears above the background */
+        margin-top: 7.5vh;
+    }
+
+    /* Form element styling */
+    .form-group {
+        margin-bottom: 5px;
+
+    }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+    .form-group input, textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    /* Submit button styling */
+    .button {
+        padding: 10px 20px;
+        background-color: #5f0000;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #6b4d4d;
+    }
+
+
+
