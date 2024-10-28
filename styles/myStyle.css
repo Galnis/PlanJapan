@@ -58,14 +58,6 @@ footer {
     display: block;
     padding: .1vh 0 1vh 0;
 }
-
-.navbar-logo {
-    max-height: 50px; /* Adjust the max height as needed */
-    width: auto; /* Maintain aspect ratio */
-    display: block;
-    padding: .1vh 0 1vh 0;
-}
-
 .navbar {
     background-color: #FFE9CD;
     height: 7vh;
@@ -200,7 +192,9 @@ footer {
 .JapaneseTitle {
     font-size: 40px;
     font-family: 'Sawarabi Mincho', serif;
-    margin-top: -5vh;
+}
+.ZeroLineHeight{
+    line-height:0;
 }
 .CanFindHere {
     margin: 0 10%; /* Margins of 10% on the left and right sides */
@@ -217,8 +211,6 @@ footer {
     .CanFindHere td {
         width: 20%; /* Distribute the width evenly across 5 columns */
         text-align: center;
-        padding-left:2vw;
-        padding-right:2vw;
     }
 
         .CanFindHere td img {
@@ -304,20 +296,13 @@ li {
 }
 
 footer h1 {
-    font-family: 'Inknut Antiqua', serif;
     font-size: 3rem;
     text-align: left;
     color: #2c1e12;
     margin-bottom: 40px;
 }
 
-footer h2 {
-    font-family: 'Sawarabi Mincho', sans-serif;
-    font-size: 1.5rem;
-    text-align: left;
-    color: #2c1e12;
-    margin-top: 10px;
-}
+
 
 .read-more {
     display: inline-block;
@@ -347,7 +332,8 @@ footer h2 {
 #japanese-heading {
     font-family: 'Sawarabi Mincho', sans-serif;
     text-align: left;
-    margin-top: -5vh;
+    line-height:0;
+    font-size: 1.5rem;
     color: #2c1e12;
 }
 
@@ -459,7 +445,7 @@ footer h2 {
         line-height: 1;
     }
 .AttractionImage {
-    display: none;
+    opacity:0.5;
     width: 100%; /* Image takes full width */
     padding: 5vh 0 0 10%;
     position: absolute;
@@ -582,7 +568,7 @@ footer h2 {
         color: white;
         border: none;
         border-radius: 5px;
-        cursor: pointer;
+        opacity:0.5;
     }
 
     button:hover {
