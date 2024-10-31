@@ -1,4 +1,5 @@
 ﻿// Variable to track if a radio button is selected
+var seasonSelect = 0;
 var radioSelected = false;
 
 // Function to check if the message box is filled and a radio option is selected
@@ -64,7 +65,10 @@ function changeSeasonImage(season) {
     image.src = 'images/PlanYourTrip/Seasons/' + season + '.png';
     image.style.display = 'block';  // Show the image
     radioSelected = true;  // Mark that a radio option has been selected
-    checkFilledSections();  // Update the submit button state
+    if (seasonSelect == 0) {
+        checkFilledSections();  // Update the submit button state
+        seasonSelect++ }
+        
 }
 
 // Function to handle form submission and display a summary of the travel plan
